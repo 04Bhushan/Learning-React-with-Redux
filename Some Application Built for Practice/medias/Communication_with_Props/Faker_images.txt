@@ -1,0 +1,15 @@
+faker.js is a JavaScript library for generating fake data. Fake data is useful when building and testing our application. 
+
+Important Note about Faker Images
+In the next lecture, we will be adding images to our component using the Faker library. Faker itself used the uifaces.com API, which was recently shut down. One of our students found the issues thread here:
+
+https://github.com/Marak/faker.js/issues/464#issuecomment-729893751
+
+There are two options to resolve. The first is to use a different image other than "avatar" from the list Faker provides, such as image, animals, people, or cats. 
+
+<img alt="avatar" src={faker.image.image()} />
+If the images are loading slow or not working, you also have the option of using the Unsplash API:
+
+<img alt="avatar" src='https://source.unsplash.com/random' />
+ 
+Note - The only endpoint that shows unique random images is faker.image.image(). Otherwise, you will instead see repeated images.
